@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+/************************************************
+	Layout
+************************************************/
+html { height: 100%; -webkit-text-size-adjust: none; touch-action: manipulation;}
+body { position:relative; overflow:hidden; height:100%; background-color:#f2f2f2;}
+#divMainViewStack { overflow:hidden;}
+
+.wrap { position:fixed; width:100%; min-width:320px; height:100%; background-color: #fff;;}
+
+/* Header */
+.header { position:fixed; overflow:hidden; top:0; width:100%; height:50px; padding:15px 18px; background:#008BEC; z-index:2;}
+.header h1 { float:left; color:#fff; font-size:14px; line-height:20px;}
+.header h1 span { display:inline-block; margin-right:12px;}
+.header .listStep { float:left; margin-left:12px;}
+.header .listStep li { float:left; width:8px; height:8px; margin:4px; border-radius: 100%; background-color: #51BADC; font-size:0;}
+.header .listStep li.active {background-color: #BEF0FF;}
+.header .btnHelp { position:absolute; top:0; right:0; width:50px; height:50px; background: url(../../../../image/gap/GM/gmp/ico_call.svg) no-repeat 50% 50%; font-size:0;}
+
+/* contents */
+.contents { overflow:hidden; overflow-y:auto; height:100%; overscroll-behavior-y: none;}
+.contents h3 { position: relative; margin:30px 0 0 16px; padding-bottom:10px; border-bottom:1px solid #CACACA; color:#333333; font-weight:700;}
+/* .contents .cont + h3 { margin-top:45px;}  */
+.contents .cont h3 { margin:10px 0; padding:0; border-bottom:none; color:#333333; font-weight:700;} 
+.contents .cont h3:first-child { margin-top:0;}
+
+
+.contTop { display:table; width:100%; height:153px; padding:50px 18px 15px; background:#008BEC; color:#fff;}
+.contTop h2 { display:table-cell; color:#fff; font-size:28px; line-height: 38px; vertical-align: middle;}
+
+.cont { position:relative; margin-left:16px; padding:20px 16px 25px 0; background:#FFF;}
+.cont .contGray { margin-left:0; margin-right:-16px;}
+.cont .titGroup { margin-top:10px;}
+.cont .titGroup + .contGray { margin-top:0}
+
+.contGray { position:relative; margin:15px 0 0 16px; padding:15px 10px 15px; border-top:1px solid #CACACA; background-color:#F7F9FA;}
+.contGray + .contGray { margin-top:0; border-top:none;}
+.contGray + .contGray::before { content: ''; position:absolute; top:0; left:10px; width:calc(100% - 20px); height:1px; border-top: 1px dashed #777777;}
+.contGray .formLabel input[type='radio'] + p,
+.contGray .formLabel input[type='checkbox'] + p { padding-left:25px; font-size:14px;}
+.contGray .formGroup input.formControl { border-color:#EDEFF2; background-color: #EDEFF2;}
+.contGray .formGroup .txtSubIn .txtSub.input { background-color: #EDEFF2;}
+
+.contScroll { overflow: auto; overscroll-behavior-y: none;}
+
+.insurName { color:#333333; font-size:16px; font-weight: 700;}
+.insurCash { display:table; width:calc(100% - 16px); margin:0 0 35px 16px; padding:25px 16px 10px 0; border-bottom:1px solid #CACACA;}
+.insurCash p:nth-child(1) { display:table-cell; color:#777777;}
+.insurCash p:nth-child(2) { display:table-cell; color:#007BE0; font-size:13px; text-align: right;}
+.insurCash p:nth-child(2) strong { font-size:30px;}
+.cont .insurCash { width:calc(100% + 16px); margin-left:0;}
+
+hr.line { display:block; height:1px; margin:15px 0; border:none; border-top: 1px solid #CACACA;}
+hr.line:last-child { margin-bottom:0;}
+.cont.line { border-top: 1px solid #CACACA;}
+.cont hr.line { margin:30px -16px 30px 0;}
+
+
+.bg_01 { padding-top:185px; background:url(../../../../image/gap/GM/gmp/bg_01.svg) no-repeat 50% 10px; font-size:16px; text-align: center;}
+.bg_02 { padding-top:185px; background:url(../../../../image/gap/GM/gmp/bg_02.svg) no-repeat 50% 10px; font-size:16px; text-align: center;}
+.bg_03 { padding-top:200px; background:url(../../../../image/gap/GM/gmp/bg_03.svg) no-repeat 50% 10px;}
+.bg_04 { padding-top:200px; background:url(../../../../image/gap/GM/gmp/bg_04.svg) no-repeat 50% 10px;}
+.bg_05 { padding-top:200px; background:url(../../../../image/gap/GM/gmp/bg_05.svg) no-repeat 50% 10px;}
+
+
+/************************************************
+	스마트폰 청약 사전 준비사항
+************************************************/
+.mainIdxWrap { padding:0; background-color: #F2F2F2;}
+.mainIdxWrap h1 { position: absolute; top:15px; left:26px; color:#333; font-size:12px; font-weight:700; line-height:14px;}
+.mainIdxWrap .item { position: relative; overflow:hidden; min-width:268px; min-height:492px; margin:40px 26px 40px; border:1px solid #ACACAC; border-radius: 20px; background-color: #fff;}
+.mainIdxWrap .item .contTop { height:170px; padding:35px 16px 0; letter-spacing: -1px;}
+.mainIdxWrap .item .contTop .logo { position: absolute; top:17px; right:14px;}
+.mainIdxWrap .item .contTop .tit1 { margin:26px 0 3px; font-size:22px;}
+.mainIdxWrap .item .contTop .tit2 { color:#FFFFFF; font-size:20px;}
+.mainIdxWrap .item .contTop .tit3 { color:#FFFFFF; font-size:24px;}
+.mainIdxWrap .item .cont { margin-left:14px; margin-right:14px; padding-right:0;}
+.mainIdxWrap .item .cont > p { margin-bottom:15px; font-size:13px;}
+.mainIdxWrap .item .cont .insurName { margin-bottom:10px; padding-bottom:30px; border-bottom:1px solid #CACACA; color:#333333; font-size:17px; font-weight: 700;}
+.mainIdxWrap .item .cont .listAuth { overflow:hidden;}
+.mainIdxWrap .item .cont .listAuth li { float:left; width:30%; height:82px; padding:56px 2px 7px; font-size:11px; text-align:center;}
+.mainIdxWrap .item .cont .listAuth li:not(:first-child) { margin-left:5%;}
+.mainIdxWrap .item .cont .listAuth li.phone { background:url(../../../../image/gap/GM/gmp/ico_phone.svg) no-repeat 50% 15%;}
+.mainIdxWrap .item .cont .listAuth li.card { background:url(../../../../image/gap/GM/gmp/ico_card.svg) no-repeat 50% 25%;}
+.mainIdxWrap .item .cont .listAuth li.kakao { background:url(../../../../image/gap/GM/gmp/ico_kakao.svg) no-repeat 50% 25%;}
+
+.mainIdxWrap .item .step { display:flex; flex-direction: column; justify-content: space-around; width:calc(100% - 48px); height:400px; margin:0 24px; padding:30px 0; border-bottom:1px solid #CACACA;}
+.mainIdxWrap .item .step li { position:relative; padding-left:20px; color:#333333; font-size:15px; }
+.mainIdxWrap .item .step li span { position: absolute; left:0; color:#777777; font-size:12px; line-height:22px; vertical-align: bottom;}
+.mainIdxWrap .item .btnNext { position: absolute; bottom:20px; right: 24px; padding-right: 20px; background: transparent url(../../../../image/gap/GM/gmp/btn_arrow_gr.svg) no-repeat center right;}
+.mainIdxWrap .item .btnClose { position: absolute; bottom:20px; right: 24px; padding-right: 20px; background: transparent url(../../../../image/gap/GM/gmp/btn_arrow_bl.svg) no-repeat center right; color:#007BE0;}
+.mainIdxWrap .item .cont .btnClose { position: initial; }
+
+.mainIdxWrap .owl-dots { position:absolute; top:0; right:26px; margin-top:14px !important;}
+.mainIdxWrap .owl-dots .owl-dot span { width:8px; height:8px; margin:5px; background:#D4D4D4;}
+.mainIdxWrap .owl-dots .owl-dot.active span { background:#606060;}
+
+
+/************************************************
+	개인정보 처리 동의 및 본인인증
+************************************************/
+/* 개인정보 처리 동의 */
+.listAgr { margin-right:-16px;}
+.listAgr li { position :relative; display:table; width:100%; padding:16px 16px 16px 0; border-bottom:1px solid #CACACA;}
+.listAgr li .formLabel { display:table-cell;}
+.listAgr li .formLabel input[type='checkbox'] + p strong { font-size:13px;}
+.listAgr li .btn { display:table-cell; width:25px; text-align:right; vertical-align: middle;}
+
+.conAgr { padding: 25px 16px;}
+.conAgr > ol.listSt1 > li:not(:first-child) { margin-top: 20px;}
+.conAgr > ul > li { margin-bottom: 10px;}
+.conAgr > ul > li .formLabel input[type='checkbox'] + p { background-image:url(../../../../image/gap/GM/gmp/bg_radio.svg); background-size: 20px;}
+.conAgr > ul > li .formLabel input[type='checkbox']:checked + p { background-image:url(../../../../image/gap/GM/gmp/bg_radio_on.svg);}
+.conAgr .checkList { overflow:hidden; padding:10px 0;}
+.conAgr .checkList > p { float:left;}
+.conAgr .checkList > .formLabel { float:right;}
+.conAgr .checkList + .checkList { border-top:1px solid #CACACA;}
+.conAgr .checkGroup .formLabel { width:33.3%;} 
+.conAgr .checkGroup.n2 .formLabel { width:50%; }
+
+/* 신정법 */
+.terms-area{margin-top:30px}
+.terms-area.mt0{margin-top:0}
+.terms-area table{margin:15px 0 10px;border-top:2px solid #666;border-collapse:separate}
+.terms-area table tbody th{padding:10px 8px;background-color:#fafafa;border-bottom:1px solid #cfd6d9;color:#444;text-align:center;word-break:keep-all;line-height:1.5}
+.terms-area table tbody td{padding:10px 15px 11px 15px;border-bottom:1px solid #cfd6d9;line-height:1.5;color:#666}
+.terms-area table tbody td strong{display:block;color:#444}
+.terms-area .terms-marker{color:#111;font-size:120%;font-weight:bold}
+.terms-area .underline{text-decoration:underline}
+.terms-area h5{margin:20px 0 15px;font-size:15px;font-weight:700}
+.terms-area h5.mt40{margin:40px 0 15px}
+.terms-area .formLabel input[type='checkbox'] + p{background-image:url(../../../../image/gap/GM/gmp/bg_radio.svg); background-size: 20px;} 
+.terms-area .formLabel input[type='checkbox']:checked + p{background-image:url(../../../../image/gap/GM/gmp/bg_radio_on.svg);}
+.terms-area .formLabel input[type='checkbox']:disabled + p{background-image:url(../../../../image/gap/GM/gmp/bg_radio.svg); background-size: 20px;}
+.terms-area .terms-sign{margin-top:20px;text-align:right}
+.terms-area .dots-li{margin-top:0}
+.terms-area .dots-li li{ position:relative; padding-left:9px; margin-top:5px; }
+.terms-area .dots-li li:before{content: ''; position: absolute; top:10px; left:0; width: 3px;height: 3px; background-color: #535353; border-radius: 100% }
+.terms-area .vali_box{border:1px solid #e3e3e3;padding:15px 24px}
+
+/* 본인인증 */
+.formLabelGroup { position:relative; padding:20px 16px 30px;}
+.formLabelGroup .checkTop { position:relative;}
+.formLabelGroup .checkTop .formLabel input[type='checkbox'] + p { font-size:16px; line-height:22px;}
+.formLabelGroup .checkTop .formLabel input[type='checkbox'] + p strong { font-size:13px;}
+.formLabelGroup .checkTop .btn { position: absolute; top:0; right:0;}
+.formLabelGroup .checkTop .btnContentMore { top:3px;}
+.formLabelGroup ul { margin:18px 0 5px;}
+.formLabelGroup ul li { display:table; width:100%; margin-top:10px; padding:0 6px;}
+.formLabelGroup ul li .btn { display:table-cell; width:25px; text-align: right; vertical-align: middle;}
+
+.conAgr2 .termIntro span { display:block}
+.conAgr2 .termIntro:not(:first-child) { margin-top:30px;}
+.conAgr2 .termTit1 { margin-bottom:15px; font-size:16px; font-weight:700;}
+.conAgr2 .termTit2 { display:block; margin:18px 0 5px; font-size:14px;}
+.conAgr2 table { border-top:1px solid #CACACA; border-left:1px solid #CACACA;}
+.conAgr2 table th, .conAgr2 table td { padding:3px; border-bottom:1px solid #CACACA; border-right:1px solid #CACACA}
+
+
+/************************************************
+	계약전알릴의무사항
+************************************************/
+/* .contDisease { padding:25px 16px 87px;}
+.contDisease .cont { margin-left:0; padding-right:0; padding-top:0;}
+.contDisease .cont .txtVali { right:0;} */
+.listDisease { margin-right:-16px; margin-bottom:20px;}
+.listDisease li { position :relative; display:table; width:100%; padding:15px 16px 15px 0; border-bottom:1px solid #CACACA;}
+.listDisease li .txt { display:table-cell; font-size:15px; vertical-align: middle;}
+.listDisease li .txt p { margin-bottom:0;}
+.listDisease li .txt p:nth-child(2) { margin-top:3px; color:#777777;}
+.listDisease li .txt p:nth-child(3) { color:#777777; font-size:13px;}
+.listDisease li .btn { display:table-cell; width:70px; text-align:right; vertical-align: middle;}
+.txtDisease { margin:10px 0 0; padding-top:10px; border-top:1px solid #CACACA;}
+.txtDisease p { display:inline-block; margin:0 12px 0 0;}
+
+
+/************************************************
+	청약문서확인
+************************************************/
+.listSign { margin:20px -16px 0 0; border-top:1px solid #CACACA; background: #FFF;}
+.listSign li .signTop { position :relative; display:table; width:100%; padding:15px 30px 18px 0; border-bottom:1px solid #CACACA;}
+.listSign li .signTop p { display:table-cell; padding-right:10px; font-size:15px; vertical-align: middle;}
+.listSign li .signTop .btn { display:table-cell; width:160px; vertical-align: middle;}
+.listSign li .signTop .btn button { margin-left: 3px;}
+.listSign li .btnContentMore { top:20px; right:10px;}
+
+.listSign li .conOverWrite { padding-left:0; border-bottom:1px solid #CACACA; font-size:14px;}
+.listSign li .conOverWrite .txtWrite { display:inline; font-size:14px;}
+.listSign li .conOverWrite.done .txtWrite { color: #333333;}
+
+.listSign.boxStyle { margin:20px 0 0; border:1px solid #cacaca;}
+.listSign.boxStyle .signTop { padding:15px 30px 15px 15px; border-bottom:0;}
+.listSign.boxStyle li .conOverWrite{ padding-left:16px; border-top:1px solid #cacaca; border-bottom:0;}
+
+.conOverWrite { padding:20px 16px; font-size:15px; line-height:1.7; word-break: keep-all;}
+.conOverWrite p { margin-top:10px;}
+.conOverWrite p:first-child { margin-top:0;}
+.conOverWrite .txtWrite { display:inline-block; position:relative; margin:0 2px 0 3px; padding:0 3px; background-color: #D8F3FF; color:#CACACA; font-size:17px; line-height:25px;}
+.conOverWrite .txtWrite .formWrite { position: absolute; top:0; left:0; padding:0 3px; border:0; background:transparent; color:#333333; font-size:17px; }
+.conOverWrite .txtWrite.wrong .formWrite { color:#FF6B4D;}
+
+
+/************************************************
+	설명의무
+************************************************/
+ul.listCheck { margin-right:-16px; border-top:1px solid #DDDDDD;}
+ul.listCheck li { position: relative; padding:19px 16px 19px 0; border-bottom:1px solid #DDDDDD;}
+
+div.listCheck  .listSt2 { margin-top:30px; padding:14px 10px; border-top:1px solid #DDDDDD; border-bottom:1px solid #DDDDDD;}
+
+.listCheck .formLabel { display:block;}
+.listCheck .formLabel input[type='checkbox'] + p { display:block; padding-left:0; padding-right:29px; background: url(../../../../image/gap/GM/gmp/bg_label_check_big.svg) no-repeat center right;}
+.listCheck .formLabel input[type='checkbox']:checked + p { background: url(../../../../image/gap/GM/gmp/bg_label_check_big_on.svg) no-repeat center right; background-size:20px;}

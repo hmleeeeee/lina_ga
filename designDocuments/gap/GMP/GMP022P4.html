@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!-- ==========================
+화면ID : GMP022P4.html
+프로그램명 : 병명 검색 팝업
+============================== -->
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>라이나생명GA</title>
+    <!-- css load -->
+    <link rel="stylesheet" href="../../../css/gap/GM/gmp/import.css">
+    <!--/ css load -->
+    <!-- javaScript load -->
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/commonUi.js"></script>
+    <!--/ javaScript load -->
+</head>
+
+<body>
+    <!-- ========== 컨텐츠 html ViewStack ========== -->
+    <div id="divMainViewStack">
+
+    </div>
+    <!-- ==========/ 컨텐츠 html ViewStack ========== -->
+
+    <!-- ========== Popup html Load 영역  ========== -->
+    <div id="GMP022P4" class="layerFull layerType2" style="display:block;">
+        <div class="layerHeader type2">
+            <h4><em>병명</em> 및 <em>치료방법</em> 추가</h4>
+            <a href="javascript:commonUi.layer.closePop();" class="btnLayerClose">닫기</a>
+        </div>
+        <div class="layerBody">
+            <div class="contDisease">
+                <div class="cont">
+                    <p class="txtQ">병명</p>
+                    <div class="formGroup">
+                        <input class="formControl" onclick="commonUi.select.show('searchDisease1')"
+                            placeholder="병명을 선택해주세요"></input>
+                    </div>
+                    <p class="txtVali">선택해주세요</p>
+                </div>
+
+                <div class="cont">
+                    <p class="txtQ">완치여부</p>
+                    <div class="formChoice">
+                        <label class="formLabel">
+                            <input type="radio" name="radioDisease2_1">
+                            <p><span></span>예</p>
+                        </label>
+                        <label class="formLabel">
+                            <input type="radio" name="radioDisease2_1">
+                            <p><span></span>아니요</p>
+                        </label>
+                    </div>
+                    <p class="txtVali">선택해주세요</p>
+                </div>
+
+                <div class="cont">
+                    <p class="txtQ">재발있음</p>
+                    <div class="formChoice">
+                        <label class="formLabel">
+                            <input type="radio" name="radioDisease2_1">
+                            <p><span></span>예</p>
+                        </label>
+                        <label class="formLabel">
+                            <input type="radio" name="radioDisease2_1">
+                            <p><span></span>아니요</p>
+                        </label>
+                    </div>
+                    <p class="txtVali">선택해주세요</p>
+                </div>
+
+                <div class="cont">
+                    <p class="txtQ">합병증있음</p>
+                    <div class="formChoice">
+                        <label class="formLabel">
+                            <input type="radio" name="radioDisease2_1">
+                            <p><span></span>예</p>
+                        </label>
+                        <label class="formLabel">
+                            <input type="radio" name="radioDisease2_1">
+                            <p><span></span>아니요</p>
+                        </label>
+                    </div>
+                    <p class="txtVali">선택해주세요</p>
+                </div>
+
+                <!-- case P : 혈압 질환 관련 -->
+                <div class="cont">
+                    <div class="titGroup clearfix">
+                        <p class="txtQ fl"><strong>치료한적 없음_의사치료권유없었음</strong></p>
+                        <div class="fr"><button class="btnSt2">삭제</button></div>
+                    </div>
+                    <div class="contGray">
+                        <p class="infoTit"><strong>치료시기</strong></p>
+                        <div class="formGroup">
+                            <div class="formDate">
+                                <div>
+                                    <input type="text" class="formControl" data-type="date" data-style="fromDate"
+                                        placeholder="시작일자">
+                                </div>
+                                <span>~</span>
+                                <div>
+                                    <input type="text" class="formControl" data-type="date" data-style="toDate"
+                                        placeholder="종료일자">
+                                </div>
+                            </div>
+                        </div>
+                        <p class="infoTit"><strong>종료일자</strong></p>
+                        <div class="formGroup">
+                            <input type="text" class="formControl" placeholder="">
+                        </div>
+                        <p class="txtVali">입력해주세요</p>
+                    </div>
+
+                </div>
+                <!--/ case P : 혈압 질환 관련 -->
+            </div>
+        </div>
+        <div class="layerFooter">
+            <div class="division">
+                <p class="impor colorOg">신규 병명 추가 시 <strong>‘병명 추가’</strong> 버튼 선택<br />모든 병명 추가 완료 시 <strong>‘작성
+                        완료’</strong> 버튼 선택</p>
+            </div>
+            <div class="btn btn2ea">
+                <a href="" class="btnSt1 btnDisabled">병명 추가</a>
+                <a href="" class="btnSt1 btnDisabled">작성 완료</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 자주 검색되는 병명 -->
+    <div id="searchDisease1" class="layerSelect layerBottom" style="display: block;">
+        <div class="layerContainer on">
+            <div class="layerHeader">
+                <button onclick="commonUi.select.close('searchDisease1')" class="btnPopclose"><span class="hidden">닫기</span></button>
+            </div>
+            <div class="layerBody">
+                <div class="cont">
+                    <p class="popTitle">
+                        병명 검색
+                    <div class="formGroup valiIn">
+                        <input type="text" class="formControl do" placeholder="병명을 검색해 주세요">
+                        <button class="btnSearch">검색</button>
+                        <p class="txtVali">입력해주세요</p><!-- 1. 검색 후 hide-->
+                    </div>
+                    </p>
+                    <p class="txtResult" style="display:none"><strong>병명</strong> 당뇨병</p><!-- 2. 병명 선택 시 show -->
+                </div>
+
+                <div class="cont mt30">
+                    <!-- 1. 검색 후 hide-->
+                    <div class="contInfo">
+                        <p class="infoTxt impor"><strong>자주 검색되는 병명</strong></p>
+                        <p>자주 검색되는 병명을 이용해 병명을 검색하시면 쉽게<br>
+                        이용하실 수 있습니다.</p>
+                        <div class="txtDisease">
+                            <p>대장용종</p>
+                            <p>충치</p>
+                            <p>고혈압</p>
+                            <p>백내장</p>
+                            <p>치아우식증</p>
+                            <p>허리디스크</p>
+                            <p>고지혈증</p>
+                            <p>본태성고혈압</p>
+                            <p>당뇨병</p>
+                            <p>요추염좌</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contScroll" style="max-height:200px; display:none;">
+                    <!-- 1. 검색 후 show -->
+                    <!-- 2. 병명 선택 시 hide -->
+                    <ul class="listSelect">
+                        <li class="select">당뇨병성망막병증</li>
+                        <li>인슐린주사로조절되는당뇨병</li>
+                        <li>인슐린의존성당뇨병</li>
+                        <li>인슐린주사로조절되는당뇨병</li>
+                        <li>인슐린의존성당뇨병</li>
+                        <li>인슐린주사로조절되는당뇨병</li>
+                        <li>인슐린의존성당뇨병</li>
+                    </ul>
+                </div>
+
+                <div class="cont pb0" style="display:none;">
+                    <!-- 2. 병명 선택 시 show -->
+                    <p class="colorBl ml10">치료방법을 선택해 주세요.</p>
+                    <div class="contScroll" style="max-height:210px;">
+                        <ul class="listSelect2">
+                            <li>
+                                <label class="formLabel">
+                                    <input type="checkbox">
+                                    <p>치료방법</p>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="formLabel">
+                                    <input type="checkbox">
+                                    <p>치료방법</p>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="formLabel">
+                                    <input type="checkbox">
+                                    <p>치료방법</p>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="formLabel">
+                                    <input type="checkbox">
+                                    <p>치료방법</p>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="formLabel">
+                                    <input type="checkbox">
+                                    <p>치료방법</p>
+                                </label>
+                            </li>
+                            <li>
+                                <label class="formLabel">
+                                    <input type="checkbox">
+                                    <p>치료방법</p>
+                                </label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bottomBtn">
+                        <button class="btnSt1 btnDisabled">선택 완료</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layerMask"></div>
+    </div>
+    <!-- //자주 검색되는 병명 -->
+
+
+    <!-- ==========/ Popup html Load 영역 ========== -->
+</body>
+
+</html>

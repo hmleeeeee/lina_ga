@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<!-- ==========================
+화면ID : GMP060S8.html
+프로그램명 : 출금정보 안내 (계약자)
+============================== -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>라이나생명GA</title>
+    <!-- css load -->
+    <link rel="stylesheet" href="../../../css/gap/GM/gmp/import-renewal.css">
+    <!--/ css load -->
+    <!-- javaScript load -->
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/commonUi-renewal.js"></script>
+    <!--/ javaScript load -->
+</head>
+<body>
+<!-- ========== 컨텐츠 html ViewStack ========== -->
+<div id="divMainViewStack">
+    <div class="wrap">
+        <div class="headStep splash">
+            <ul class="stepArea">
+                <li><span>01</span>계약정보<br>확인</li>
+                <li><span>02</span>청약서류<br>확인</li>
+                <li><span>03</span>주요사항 확인<br>및 전자서명</li>
+                <li class="on"><span>04</span>출금정보<br>등록 및 결제</li>
+            </ul>
+        </div>
+        <div class="progressWrap"> <progress max="1000" value="1000"></progress></div>
+        <div class="header">
+            <div class="headInner">
+                <button onclick="history.back();" type="button" class="btnPrev"><span class="hidden">이전</span></button>
+                <h1 class="logo"><a href="#" class="hidden">라이나생명 모바일청약</a></h1>
+                <div>
+                    <button type="button" class="btnCall"><span class="hidden">문의</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="contents">
+            <div class="contTop">
+                <p class="contStep"><span><b>4</b>/4</span>출금정보 등록 및 결제</p>
+                <h2>보험료 납부를 위한<br /><em>동의서를 체크</em>해 주세요.</h2>
+            </div>
+            <!-- 1. 출금동의서 체크 -->
+            <section class="contArea">
+                <div class="cont">
+                    <div class="accordionWrap on">
+                        <p class="infoTxt line">보험료 납부 및 개인(신용)정보 처리 동의(필수)<button class="btnContentMore"><span class="hidden">더보기</span></button></p> <!--20210709 'line' class 추가-->
+                        <div class="contentHidden">
+                            <h3 class="inBtn">
+                                <label class="formLabel"><input type="checkbox" class="chkAll"><p class="infoTxt">전체동의</p></label> <!--20210709 띄어쓰기 수정 및 'infoTxt' class 추가-->
+                                <button type="button" class="btnSt2">전문이미지 보기</button>
+                            </h3>
+                            <div class="formGroup">
+                                <div class="checkGroup">
+                                    <label class="formLabel">
+                                        <input type="checkbox" name="chk01" class="chkbox">
+                                        <p>초회 보험료 전체동의</p><!--20210709 띄어쓰기 수정-->
+                                    </label>
+                                    <label class="formLabel">
+                                        <input type="checkbox" name="chk02" class="chkbox">
+                                        <p>계속 보험료 전체동의</p>
+                                    </label>
+                                </div>
+                                <div class="contBox">
+                                    <p>귀하는 동의를 거부하실 수 있으나, 거부시 <br>보험료 출금 및 납부(수납) 처리가 불가능합니다.</p>
+                                </div>
+                            </div>
+                            <!-- 최초 진입시 보험료 납부 아코디언만 on -->
+                            <div class="accordionWrap on">
+                                <div class="formGroup">
+                                    <label class="formLabel">
+                                        <input type="checkbox" class="">
+                                        <p class="infoTxt">보험료 납부에 관한 사항</p> <!--20210709 'infoTxt' class 추가-->
+                                    </label>
+                                    <button class="btnContentMore"><span class="hidden">더보기</span></button>
+                                </div>
+                                <div class="contentHidden">
+                                    <div class="borderBox textArea"> 
+                                        <!-- 20210709 'textAreaCont' div 추가 -->
+                                        <div class="textAreaCont">
+                                            <p>
+                                                당사는 매월 보험료 납입기일에 정기적으로 출금(결제)를 시도합니다. 만약 납부자님의 계좌 잔액 부족/카드 일시 사용 정지 등의 사유로 인하여 납부되지 못하는 경우에는 납입기일 이후부터
+                                                보험계약 실효 전까지 지속적으로 보험료의 출금(결제)을 시도(요청)합니다. 이에 동의하십니까?
+                                                (출금/결제 시점마다 납부자께 별도 안내를 드리지는 않으나, 지속적인 보험료 미납으로 인하여 보험계약이 실효될 우려가 있는 경우에는 계약자 및 납부자께 별도의 안내를 진행합니다)
+                                            </p>
+                                        </div>
+                                        <div class="checkGroup type02"> <!--20210709 'type02' class 추가-->
+                                            <label class="formLabel">
+                                                <input type="checkbox" name="chk01" class="chkbox">
+                                                <p>초회 보험료</p>
+                                            </label>
+                                            <label class="formLabel">
+                                                <input type="checkbox" name="chk02" class="chkbox">
+                                                <p>계속 보험료</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordionWrap">
+                                <div class="formGroup">
+                                    <label class="formLabel">
+                                        <input type="checkbox" class="chkAll">
+                                        <p class="infoTxt">개인(신용)정보의 수집&middot;이용에 관한 사항</p> <!--20210709 'infoTxt' class 추가-->
+                                    </label>
+                                    <button class="btnContentMore"><span class="hidden">더보기</span></button>
+                                </div>
+                                <div class="contentHidden">
+                                    <div class="borderBox">
+                                        <p>고유식별 정보의 수집·이용에 동의 하십니까?</p>
+                                        <div class="checkGroup type02">
+                                            <label class="formLabel">
+                                                <input type="checkbox" name="chk01" class="chkbox">
+                                                <p>초회 보험료</p>
+                                            </label>
+                                            <label class="formLabel">
+                                                <input type="checkbox" name="chk02" class="chkbox">
+                                                <p>계속 보험료</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="borderBox">
+                                        <p>개인(신용)정보의 수집·이용에 동의 하십니까?</p>
+                                        <div class="checkGroup type02">
+                                            <label class="formLabel">
+                                                <input type="checkbox" name="chk01" class="chkbox">
+                                                <p>초회 보험료</p>
+                                            </label>
+                                            <label class="formLabel">
+                                                <input type="checkbox" name="chk02" class="chkbox">
+                                                <p>계속 보험료</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordionWrap">
+                                <div class="formGroup">
+                                    <label class="formLabel">
+                                        <input type="checkbox" class="">
+                                        <p class="infoTxt">개인(신용)정보의 제공에 관한 사항</p> <!--20210709 'infoTxt' class 추가-->
+                                    </label>
+                                    <button class="btnContentMore"><span class="hidden">더보기</span></button>
+                                </div>
+                                <div class="contentHidden">
+                                    <div class="borderBox">
+                                        <p>
+                                            고유식별 정보의 제공에 동의 하십니까?
+                                        </p>
+                                        <div class="checkGroup">
+                                            <label class="formLabel">
+                                                <input type="checkbox" name="chk01" class="chkbox">
+                                                <p>초회 보험료</p>
+                                            </label>
+                                            <label class="formLabel">
+                                                <input type="checkbox" name="chk02" class="chkbox">
+                                                <p>계속 보험료</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="borderBox">
+                                        <p>
+                                            개인(신용)정보의 제공에 동의 하십니까?
+                                        </p>
+                                        <div class="checkGroup">
+                                            <label class="formLabel">
+                                                <input type="checkbox" name="chk01" class="chkbox">
+                                                <p>초회 보험료</p>
+                                            </label>
+                                            <label class="formLabel">
+                                                <input type="checkbox" name="chk02" class="chkbox">
+                                                <p>계속 보험료</p>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- //1. 출금동의서 체크 -->
+
+            <!-- 20210709 출금정보 입력 마크업 변경 다수 -->
+
+            <!-- 2. 출금정보 입력 -->
+            <section class="contArea">
+                <div class="contTop borderNone">
+                    <h2><em>납부방법을 선택</em>후<br />출금정보를 입력해주세요.</h2>
+                    <div class="insurBox insurSmallbox">
+                        <div class="insurCash">
+                            <p>제 1회(초회)보험료</p>
+                            <p><strong>81,140</strong> 원</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="cont">
+                    <div class="tabWrap paymentTabs">
+                        <h3>초회보험료 납부방법 선택</h3>
+                        <ul class="tab tabSt1">
+                            <li class="formGroup active"> 
+                                <label id="" class="formLabel">
+                                    <input type="radio" name="paymentType1">
+                                    <p><span></span>즉시이체</p>
+                                </label>
+                            </li>
+                            <li class="formGroup">
+                                <label id="" class="formLabel">
+                                    <input type="radio" name="paymentType1">
+                                    <p><span></span>신용카드</p>
+                                </label>
+                            </li>
+                        </ul>
+                        <!-- 2-1 즉시이체 선택시 노출 폼 -->
+                        <div class="tabContent">
+                            <!-- 초회보험료 납부방법 선택 -->
+                            <div class="cont">
+                                <div class="formGroup">
+                                    <label>결제금융기관 선택</label>
+                                    <input type="text" class="formControl formSelect" value="선택" readonly>
+                                </div>
+                                <div class="formGroup valiIn">
+                                    <div class="inputWrap">
+                                        <label>출금계좌번호 입력</label>
+                                        <input type="tel" class="formControl vail" placeholder="‘-’ 없이 번호만 입력" value="">
+                                        <!-- 입력가이드 class: do 추가 / 입력안되었을때 class: vali 추가-->
+                                        <p class="txtVali">숫자만 입력해주세요.</p>
+                                    </div>
+                                </div>
+                                <div class="formGroup mt0">
+                                    <label>예금주명</label>
+                                    <input type="text" class="formControl" placeholder="" value="홍길동">
+                                </div>
+                            </div>
+                             <!-- //초회보험료 납부방법 선택 -->
+                            <!-- 계속보험료 납부방법 선택 -->
+                            <div class="cont">
+                                <h3>계속보험료 납부방법 선택</h3>
+                                <div class="formGroup valiIn">
+                                    <label>등록한 결제정보와 동일하게 처리할까요?</label>
+                                    <div class="formChoice">
+                                        <label class="formLabel">
+                                            <input type="radio" name="radioChk1">
+                                            <p><span></span>예</p>
+                                        </label>
+                                        <label class="formLabel">
+                                            <input type="radio" name="radioChk1">
+                                            <p><span></span>아니오</p>
+                                        </label>
+                                    </div>
+                                    <p class="txtVali">선택해주세요.</p>
+                                </div>
+                                <div class="paymentTabs subTabs">
+                                    <h3>납부방법 선택</h3>
+                                    <ul class="tabSt1">
+                                        <li class="subtabLink formGroup" data-tab="tab-1">
+                                            <label id="" class="formLabel">
+                                                <input type="radio" name="paymentType2">
+                                                <p><span></span>자동이체</p>
+                                            </label>
+                                        </li>
+                                        <li class="subtabLink formGroup" data-tab="tab-2">
+                                            <label id="" class="formLabel">
+                                                <input type="radio" name="paymentType2">
+                                                <p><span></span>신용카드</p>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <!-- 계속보험료 자동이체 -->
+                                    <div id="tab-1" class="subTabContent">                                        
+                                        <div class="formGroup">
+                                            <label>결제금융기관 선택</label>
+                                            <!-- 재 선택 시 계속보험료 납부 가능 금융사 선택 팝업 호출 (GMP050P7) -->
+                                            <input type="text" class="formControl formSelect" value="신한은행" readonly>
+                                        </div>
+                                        <div class="formGroup valiIn">
+                                            <label>출금계좌번호 입력</label>
+                                            <input type="tel" class="formControl vail" placeholder="‘-’ 없이 번호만 입력" value="">
+                                            <!-- 입력가이드 class: do 추가 / 입력안되었을때 class: vali 추가-->
+                                            <p class="txtVali">숫자만 입력해주세요.</p>
+                                        </div>
+                                        <div class="formGroup">
+                                            <label>예금주</label>
+                                            <input type="text" class="formControl" placeholder="" value="홍길동">
+                                        </div>
+                                        <div class="formGroup valiIn">
+                                            <label>자동이체일자</label>
+                                            <div class="formRadio">
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radioDate">
+                                                    <p>10일</p>
+                                                </label>
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radioDate">
+                                                    <p>15일</p>
+                                                </label>
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radioDate">
+                                                    <p>20일</p>
+                                                </label>
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radioDate">
+                                                    <p>말일</p>
+                                                </label>
+                                            </div>
+                                            <p class="txtVali">입력해주세요</p>
+                                        </div>
+                                    </div>
+                                    <!-- //계속보험료 자동이체 -->
+
+                                    <!-- 계속보험료 입력 신용카드 -->
+                                    <div id="tab-2" class="subTabContent">
+                                        <div class="formGroup valiIn">
+                                            <label>카드번호 입력</label>
+                                            <input type="text" class="formControl do" placeholder="" maxlength="16" value="1104******09">
+                                            <!--임시 value-->
+                                            <p class="txtVali">숫자만 입력해주세요.</p>
+                                        </div>
+                                        <div class="formGroup valiIn">
+                                            <label>유효기간(월/년)</label>
+                                            <input type="number" class="formControl" placeholder="4자리 입력">
+                                            <p class="txtVali">정확히 입력해주세요.</p>
+                                        </div>
+                                        <div class="formGroup valiIn">
+                                            <label>카드 소유주명</label>
+                                            <input type="text" class="formControl" value="홍길동">
+                                            <p class="txtVali">정확히 입력해주세요.</p>
+                                        </div>
+                                        <div class="formGroup">
+                                            <label>결제일</label>
+                                            <div class="paymentDate"><button type="button" class="btnSt2">15일</button></div>
+                                        </div>
+                                    </div>  
+                                    <!-- //계속보험료 입력 신용카드 -->
+                                </div>
+                            </div>
+                            <!-- //계속보험료 납부방법 선택 -->
+                        </div>
+                        <!-- //2-1 즉시이체 선택시 노출 폼 -->
+
+                        <!-- 2-2 신용카드 선택시 노출 폼 -->
+                        <div class="tabContent">
+                            <!-- 초회보험료 납부방법 선택 -->
+                            <div class="cont">
+                                <div class="formGroup valiIn">
+                                    <label>카드번호 입력</label>
+                                    <input type="text" class="formControl do" placeholder="" maxlength="16" value="1104******09"><!--임시 value값-->
+                                    <p class="txtVali">숫자만 입력해주세요.</p>
+                                </div>
+                                <div class="formGroup valiIn">
+                                    <label>유효기간(월/년)</label>
+                                    <input type="number" class="formControl" placeholder="4자리 입력">
+                                    <p class="txtVali">정확히 입력해주세요.</p>
+                                </div>
+                                <div class="formGroup valiIn">
+                                    <label>카드 소유주명</label>
+                                    <input type="text" class="formControl" value="홍길동">
+                                    <p class="txtVali">정확히 입력해주세요.</p>
+                                </div>
+                            </div>
+                            <!-- //초회보험료 납부방법 선택 -->
+                            <!-- 계속보험료 납부방법 선택 -->
+                            <div class="cont">
+                                <h3>계속보험료 납부방법 선택</h3>
+                                <div class="formGroup valiIn">
+                                    <label>등록한 결제정보와 동일하게 처리할까요?</label>                               
+                                    <div class="formChoice">
+                                        <label class="formLabel">
+                                            <input type="radio" name="radioChk2">
+                                            <p><span></span>예</p>
+                                        </label>
+                                        <label class="formLabel">
+                                            <input type="radio" name="radioChk2">
+                                            <p><span></span>아니오</p>
+                                        </label>
+                                    </div>
+                                    <p class="txtVali">선택해주세요.</p>
+                                </div>    
+                                <div class="paymentTabs subTabs">
+                                    <h3>납부방법 선택</h3>
+                                    <ul class="tabSt1">
+                                        <li class="subtabLink formGroup" data-tab="tab-3">
+                                            <label id="" class="formLabel">
+                                                <input type="radio" name="paymentType3">
+                                                <p><span></span>자동이체</p>
+                                            </label>
+                                        </li>
+                                        <li class="subtabLink formGroup" data-tab="tab-4">
+                                            <label id="" class="formLabel">
+                                                <input type="radio" name="paymentType3">
+                                                <p><span></span>신용카드</p>
+                                            </label>
+                                        </li>
+                                    </ul>
+                                    <!-- 계속보험료 자동이체 -->
+                                    <div id="tab-3" class="subTabContent">
+                                        <div class="formGroup">
+                                            <label>결제금융기관 선택</label>
+                                            <!-- 재 선택 시 계속보험료 납부 가능 금융사 선택 팝업 호출 (GMP050P7) -->
+                                            <input type="text" class="formControl formSelect" value="신한은행" readonly>
+                                        </div>
+                                        <div class="formGroup valiIn">
+                                            <label>출금계좌번호 입력</label>
+                                            <input type="tel" class="formControl vail" placeholder="‘-’ 없이 번호만 입력" value="">
+                                            <!-- 입력가이드 class: do 추가 / 입력안되었을때 class: vali 추가-->
+                                            <p class="txtVali">숫자만 입력해주세요.</p>
+                                        </div>
+                                        <div class="formGroup">
+                                            <label>예금주</label>
+                                            <input type="text" class="formControl" placeholder="" value="홍길동">
+                                        </div>
+                                        <div class="formGroup valiIn">
+                                            <label>자동이체일자</label>
+                                            <div class="formRadio">
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radioDate">
+                                                    <p>10일</p>
+                                                </label>
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radioDate">
+                                                    <p>15일</p>
+                                                </label>
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radioDate">
+                                                    <p>20일</p>
+                                                </label>
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radioDate">
+                                                    <p>말일</p>
+                                                </label>
+                                            </div>
+                                            <p class="txtVali">입력해주세요</p>
+                                        </div>
+                                    </div>
+                                    <!-- //계속보험료 자동이체 -->
+
+                                    <!-- 계속보험료 입력 신용카드 -->
+                                    <div id="tab-4" class="subTabContent">
+                                        <div class="formGroup valiIn">
+                                            <label>카드번호 입력</label>
+                                            <input type="text" class="formControl do" placeholder="" maxlength="16" value="1104******09">
+                                            <!--임시 value-->
+                                            <p class="txtVali">숫자만 입력해주세요.</p>
+                                        </div>
+                                        <div class="formGroup valiIn">
+                                            <label>유효기간(월/년)</label>
+                                            <input type="number" class="formControl" placeholder="4자리 입력">
+                                            <p class="txtVali">정확히 입력해주세요.</p>
+                                        </div>
+                                        <div class="formGroup valiIn">
+                                            <label>카드 소유주명</label>
+                                            <input type="text" class="formControl" value="홍길동">
+                                            <p class="txtVali">정확히 입력해주세요.</p>
+                                        </div>
+                                        <div class="formGroup">
+                                            <label>결제일</label>
+                                            <div class="paymentDate"><button type="button" class="btnSt2">15일</button></div>
+                                        </div>
+                                    </div>
+                                    <!-- //계속보험료 입력 신용카드 -->
+                                </div>
+                            </div>
+                            <!-- //계속보험료 납부방법 선택 -->
+                        </div>
+                        <!-- //2-2 신용카드 선택시 노출 폼 -->
+                    </div>
+
+                    <!-- 결제 유의사항 -->
+                    <div class="accordionWrap on mt30">
+                        <p class="infoTxt">결제 유의사항<button class="btnContentMore"><span class="hidden">더보기</span></button></p>
+                        <div class="contentHidden">
+                            <ul class="listSt1">
+                                <li>제 1회(초회) 보험료는 청약완료 시, 고객님의 계좌 또는 신용카드에서 즉시 결제되므로 결제 정보를 사전에 확인해주세요.</li>
+                                <li>평생계좌 번호는 초회보험료 출금 및 계속보험료 자동이체 등록 불가합니다.</li>
+                                <li>제 1회(초회) 보험료 결제 계좌 오류 시, 청약 완료 단계에서 결제 계좌 변경 후 결제가 가능합니다.</li>
+                                <li><a href="#" class="link">보험료결제 가능 금융사 확인</a></li>
+                                <!-- 링크 클릭시 은행선택 팝업 중 초회보험료 납부 은행 리스트업된 팝업으로 호출 (GMP050P5) -->
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- //결제 유의사항 -->
+                </div>
+            </section>
+            <!-- //2. 출금정보 입력 -->
+            <!-- //20210709 출금정보 입력 마크업 변경 다수 -->
+
+            <!-- 3. 출금결제 처리 요청 체크 및 서명 진행 -->
+            <section class="contArea">
+                <div class="cont">
+                    <div class="borderBox agreeBox">
+                        <label class="formLabel"> <!--20210709 'infoTit' class 삭제-->
+                            <input type="checkbox" name="" class="chkbox" checked>
+                            <p>본인은 위와 같이 개인(신용)정보 및 금융거래
+                            정보의 처리(수집·이용,조회,제공)에 동의하며,
+                            초회 보험료와 계속 보험료의 출금결제 처리를
+                            요청합니다</p> <!--20210709 'line' class 삭제 -->
+                        </label>       
+                    </div>
+                    <!-- 20210709 체크박스 기능 삭제, 서명 유형 탭 메뉴 추가 -->
+                    <div class="tabWrap full">
+                        <ul class="tab tabSt1">
+                            <li class="active">초회 보험료</li>
+                            <li>계속 보험료</li>
+                        </ul>
+                        <div class="tabContent on">
+                            <div class="signBox">
+                                <p>위의 내용을 확인하시고 서명을 터치해 주세요.</p>
+                                <div>
+                                    <span>서명을 터치해주세요.</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tabContent">
+                            <div class="signBox">
+                                <p>위의 내용을 확인하시고 서명을 터치해 주세요.</p>
+                                <div>
+                                    <span>서명을 터치해주세요.</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- //20210709 체크박스 기능 삭제, 서명 유형 탭 메뉴 추가 -->
+                </div>
+            </section>
+            <!-- //3. 출금결제 처리 요청 체크 및 서명 진행 -->
+
+            <!-- 4. 청약서류 다운로드 -->
+            <section class="contArea">
+                <div class="contTop">
+                    <h2>청약서/상품설명서 부본<br> 및 보험약관 <em>다운로드를<br> 진행</em>해 주세요.</h2>
+                </div>
+                <div class="cont">
+                    <p class="infoTit impor">다운로드를 모두 진행하셔야 청약이 완료됩니다.</p>
+                    <ul class="downloadList">
+                        <li><a href="#" download="">청약서/상품설명서 다운로드</a></li>
+                        <li><a href="#" download="">보험약관 다운로드</a></li>
+                    </ul>
+                </div>
+                <div class="btnArea">
+                    <button type="button" class="btnSt1 btnDisabled">보험료 결제 및 청약 완료</button>
+                    <!-- 완료시 'complete' 클래스 부여 시 지정해놓은 스타일 노출됨 -->
+                </div>
+            </section>
+            <!-- //4. 청약서류 다운로드 -->
+           
+        </div>    
+    </div>
+</div>
+<!-- ==========/ 컨텐츠 html ViewStack ========== -->
+</body>
+<!-- 20210709 계속보험료 납부방법 선택 tab 스크립트 추가 -->
+<script>
+    $('.subTabs .tabSt1 li').click(function () {
+        var tab_id = $(this).attr('data-tab');
+
+        $('.subTabs .tabSt1 li').removeClass('on');
+        $('.subTabContent').removeClass('on');
+
+        $(this).addClass('on');
+        $("#" + tab_id).addClass('on');
+    })
+</script>
+</html>

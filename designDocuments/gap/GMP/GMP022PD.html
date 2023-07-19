@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- ==========================
+화면ID : GMP022PD.html
+프로그램명 : 청약 이어진행하기 팝업
+============================== -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>라이나생명GA</title>
+    <!-- css load -->
+    <link rel="stylesheet" href="../../../css/gap/GM/gmp/import-renewal.css">
+    <!--/ css load -->
+    <!-- javaScript load -->
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/commonUi-renewal.js"></script>
+    <!--/ javaScript load -->
+</head>
+<body>
+<!-- ========== 컨텐츠 html ViewStack ========== -->
+<div id="divMainViewStack">
+    <button onclick="commonUi.layer.showPop('GMP022PD');">청약 이어진행하기</button>
+</div>
+<!-- ==========/ 컨텐츠 html ViewStack ========== -->
+
+
+<!-- ========== Popup html Load 영역  ========== -->
+<div id="GMP022PD" class="layer" style="display: block;">
+    <div class="layerContainer">
+        <div class="layerBody">
+            <h2 class="txtMain bg_move">고객님께서 이전 방문시 진행 중인<br><span class="colorBl">청약단계로 이동</span>하시겠습니까?</h2>
+            <div class="layerTxtlist">                
+                <p><em>처음부터 진행하기</em>청약 1단계부터 입력한 정보를 확인하며, <br> 순차적으로 다음 단계를 진행</p>                
+                <p><em>진행중인 단계로 이동하기</em>최근 진행중인 단계로 이동</p>
+            </div>
+        </div>
+        <div class="layerFooter">
+            <div class="btnArea btnHalf">
+                <a href="javascript:commonUi.layer.closePop('alertKakao');" class="btnSt1 btnGray">처음부터 진행하기</a>
+                <a href="javascript:commonUi.layer.closePop('alertKakao');" class="btnSt1">진행중인 단계로 이동</a>
+            </div> 
+        </div>
+    </div>
+    <div class="layerMask"></div>
+</div>
+<!-- ==========/ Popup html Load 영역 ========== -->
+</body>
+</html>

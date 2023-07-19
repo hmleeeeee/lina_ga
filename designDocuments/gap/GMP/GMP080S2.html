@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<!-- ==========================
+화면ID : GMP080S2.html
+프로그램명 : 계약정보 확인(지정대리청구인))
+============================== -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>라이나생명GA</title>
+    <!-- css load -->
+    <link rel="stylesheet" href="../../../css/gap/GM/gmp/import-renewal.css">
+    <!--/ css load -->
+    <!-- javaScript load -->
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/commonUi-renewal.js"></script>
+    <!--/ javaScript load -->
+</head>
+<body>
+<div id="divMainViewStack">
+	<!-- GMP080S2.html -->
+    <div class="wrap">
+        <div class="headStep splash">
+            <ul class="stepArea">
+                <li class="on"><span>01</span>보험계약정보<br>확인</li> <!--20210709 워딩 수정-->
+                <li><span>02</span>청약서류<br>확인</li>
+                <li><span>03</span>주요사항 확인<br>및 전자서명</li>
+            </ul>
+        </div>
+        <div class="progressWrap"> <progress max="1000" value="333"></progress></div>
+        <div class="header">
+            <div class="headInner">
+                <button onclick="history.back();" type="button" class="btnPrev"><span class="hidden">이전</span></button>
+                <h1 class="logo"><a href="#" class="hidden">라이나생명 모바일청약</a></h1>
+                <div>
+                    <button type="button" class="btnCall"><span class="hidden">문의</span></button>
+                    <button type="button" class="btnNext"><span class="hidden">다음</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="contents">
+            <div class="contTop borderNone">
+                <p class="contStep"><span><b>1</b>/3</span>보험계약정보 확인</p> <!--20210709 워딩 수정-->
+                <h2><span class="name">홍길동</span>님의<br> <em>보험계약 정보</em>를<br>확인해 주세요.</h2>
+                <div class="insurBox">
+                    <p class="insurName">(무)암걱정없는 라이나100세 암보험<br>(해지환급금 미지급형)</p>
+                    <div class="insurCash">
+                        <p>월 납입보험료</p>
+                        <p><strong>81,140</strong> 원</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 계약정보 -->
+            <div class="cont">         
+                <h3 class="mt0">계약정보</h3>
+                <ul class="listSt2">
+                    <li><p>계약자 / 피보험자</p> <p>홍길동 / 홍길동</p></li>
+                    <li><p>가입금액</p> <p class="colorBl">3,000 만원</p></li>
+                    <li><p>보험기간 / 납입기간</p> <p>100세 만기 / 30년</p></li>
+                    <li><p>납입주기</p> <p>월납</p></li>
+                    <li><p>합계보험료</p> <p>81,140원</p></li>
+                </ul>
+            </div>
+            <!-- //계약정보 -->
+
+            <nav id="navbar" class="navbar">
+                <ul class="navMenu">
+                    <li><a data-scroll="tab1" href="#tab1" class="dot active"><span>주계약/특약</span></a></li>
+                    <li><a data-scroll="tab2" href="#tab2" class="dot"><span>보장내역</span></a></li>
+                    <li><a data-scroll="tab3" href="#tab3" class="dot"><span>계약관계자</span></a></li>
+                </ul>
+            </nav>
+            <!-- 주계약/특약 -->
+            <section id="tab1" class="section">
+                <div class="cont">
+                    <ul class="listSt2 type3"> <!--20210709 'type3' class추가-->
+                        <li><p>주계약</p> <p>(무)암걱정없는라이나100세암보험<br>(무)암걱정없는라이나100세암보험<br>(해지환급금 미지급형)</p></li>
+                        <li><p>가입금액</p> <p class="colorBl">3,000 만원</p></li>
+                        <li><p>납입기간</p> <p>100세 만기 / 30년납</p></li>
+                        <li><p>보험료</p> <p>47,700원</p></li>
+                    </ul>      
+                    <hr class="line" />
+                    <ul class="listSt2 type3"> <!--20210709 'type3' class추가-->
+                        <li>
+                            <p>특약</p>
+                            <p>(무)100세 7대고액암진단특약 7대
+                                고액암진단특약 고액암진단특약 7대
+                                고액암진단특약 고액암진단특약 7대<br>(해지환급금 미지급형)</p>
+                        </li>                        
+                        <li><p>가입금액</p> <p class="colorBl">3,000 만원</p></li>
+                        <li><p>납입기간</p> <p>100세 만기 / 30년납</p></li>
+                    </ul>
+                    <hr class="line" />
+                    <ul class="listSt2 type3"> <!--20210709 'type3' class추가-->
+                        <li>
+                            <p>특약</p>
+                            <p>(무)아나필락시스 쇼크진단특약<br>
+                                (무)아나필락시스 쇼크진단특약</p>
+                        </li>
+                        <li><p>가입금액</p> <p class="colorBl">3,000 만원</p></li>
+                        <li><p>납입기간</p> <p>100세 만기 / 30년납</p></li>
+                    </ul>
+                </div>
+            </section>
+            <!-- //주계약/특약 -->
+
+            <!-- 보장내역 -->
+            <section id="tab2" class="section">
+                <div class="cont">
+                    <div class="insListArea">
+                        <h3>주계약 보장내역</h3>
+                        <!-- 20210726 주계약 보험상품 필드 추가 -->
+                        <ul class="listSt2 type2">
+                            <li>
+                                <p class="w100">주계약 보험명</p>
+                                <ul class="listSt2 type2">
+                                    <li><p>암(유방암/전립선암 제외) 치료보험금</p> <p><span class="colorBl">3,000만원</span></p></li>
+                                    <li><p>유방암/전립선암 치료보험금</p> <p><span class="colorBl">600만원</span></p></li>
+                                    <li><p>갑상선암 치료보험금</p><p><span class="colorBl">300만원</span></p></li>
+                                    <li><p>기타피부암 치료보험금</p> <p><span class="colorBl">300만원</span></p></li>
+                                    <li><p>제자리암(상피내암) 치료보험금</p> <p><span class="colorBl">300만원</span></p></li>
+                                    <li><p>경계성종양 치료보험금</p> <p><span class="colorBl">300만원</span></p></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- //20210726 주계약 보험상품 필드 추가 -->
+                    </div>
+                    <div class="insListArea">
+                        <h3>특약 보장내역</h3>
+                        <!-- 20210726 특약 보험상품 필드 추가 -->
+                        <ul class="listSt2 type2">
+                            <li>
+                                <p class="w100">특약1 보험명</p>
+                                <ul class="listSt2 type2">
+                                    <li><p>7대고액암 치료보험금</p> <p><span class="colorBl">3,000만원</span></p></li>
+                                    <li><p>아나필락시스쇼크 진단보험금</p> <p><span class="colorBl">200만원</span></p></li>
+                                    <li><p>뇌출혈 치료보험금</p> <p><span class="colorBl">3,000만원</span></p></li>
+                                    <li><p>급성심근경색증 치료보험금</p> <p><span class="colorBl">3,000만원</span></p></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p class="w100">특약2 보험명</p>
+                                <ul class="listSt2 type2">
+                                    <li><p>7대고액암 치료보험금</p> <p><span class="colorBl">3,000만원</span></p></li>
+                                    <li><p>아나필락시스쇼크 진단보험금</p> <p><span class="colorBl">200만원</span></p></li>
+                                    <li><p>뇌출혈 치료보험금</p> <p><span class="colorBl">3,000만원</span></p></li>
+                                    <li><p>급성심근경색증 치료보험금</p> <p><span class="colorBl">3,000만원</span></p></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <!-- //20210726 특약 보험상품 필드 추가 -->
+                    </div>
+                    <!-- 20210726 상세 지급기준 안내문구, 보장내역이 없을 경우 case 추가 -->
+                    <div class="insListArea">
+                        <ul class="listSt2 type2">
+                            <!-- 상세 지급기준 안내문구 -->
+                            <li class="w100">
+                                <p class="impor colorOg">상기 보장금액은 지급조건을 만족하는 경우에 한해서 지급되므로 반드시 보험약관의 상세 지급기준을 참고하시기 바랍니다.</p>
+                            </li>
+                            <!-- 보장내역 없을시 -->
+                            <li class="txtC">보장내역이 없습니다.</li>
+                        </ul>
+                    </div>
+                    <!-- //20210726 상세 지급기준 안내문구, 보장내역이 없을 경우 case 추가 -->
+                </div>
+            </section>
+            <!--/ 보장내역-->
+
+            <!-- 계약관계자 -->
+            <section id="tab3" class="section">
+                <div class="cont">
+                    <h3>계약관계자</h3>
+                    <ul class="listSt2">
+                        <li><p>계약자</p> <p>홍*동</p></li>
+                        <li><p>피보험자</p> <p>홍*동</p></li>
+                        <li><p>만기시 수익자</p> <p>홍*동</p></li>
+                        <li><p>장해시 수익자</p> <p>홍*동</p></li>
+                        <li><p>사망시 수익자</p> <p>법정 상속인</p></li>
+                        <li><p>Email</p> <p>email@gmail.com</p></li>
+                        <li><p>우편물수령처</p> <p>직장</p></li>
+                        <li><p>주소</p> <p>(12345)서울시 마포구 월드컵북로 63<br> 서레빌딩 2층</p></li>
+                    </ul>                                
+                    <!-- 지정대리청구인 /-->
+                    <h3>지정대리청구인</h3>
+                    <ul class="listSt2">
+                        <li><p>지정대리청구인1(대표)</p> <p>홍*동</p></li>
+                        <li><p>지정대리청구인2</p> <p>미지정</p></li>
+                    </ul>                  
+                    <!-- 기타 /-->
+                    <h3>기타</h3>
+                    <ul class="listSt2">
+                        <li><p>계약자 실소유자 동일여부</p> <p>예</p></li>
+                        <li><p>직업정보</p> <p>보험사무원</p></li>
+                        <li><p>운전여부</p> <p>승용차</p></li>
+                    </ul>
+                    <!-- 피보험자 /-->
+                    <h3>피보험자</h3>
+                    <ul class="listSt2">
+                        <li><p>직업정보</p> <p>경영지원 사무직 관리자</p></li>
+                        <li><p>운전여부</p> <p>자가용승용차운전자</p></li>
+                    </ul>
+                    <!-- 친권자 정보 확인 /-->
+                    <h3>친권자 01</h3>
+                    <ul class="listSt2">
+                        <li><p>관계</p> <p>부</p></li>
+                        <li><p>성명</p> <p>홍상직</p></li>
+                        <li><p>휴대전화</p> <p>010-2345-6789</p></li>
+                    </ul>
+                    <h3>친권자 02</h3>
+                    <ul class="listSt2">
+                        <li><p>관계</p> <p>모</p></li>
+                        <li><p>성명</p> <p>김현미</p></li>
+                        <li><p>휴대전화</p> <p>010-3456-7890</p></li>
+                    </ul>
+                </div>
+            </section>
+            <!--/ 계약관계자 -->
+        </div>
+    </div>
+    <div class="cont">
+        <div class="btnArea">
+            <button class="btnSt1">청약서류 확인하기</button>
+        </div> 
+    </div>
+</div>
+<!--/ GMP080S2.html -->
+
+<!-- 20210709 script 삭제 -->
+
+</body>
+</html>

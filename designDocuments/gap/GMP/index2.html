@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-3.5.1.min.js"></script>
+  <title>라이나생명 GA전자청약 고도화</title>
+  <style>
+    * {margin:0; padding:0; box-sizing:border-box;line-height: 1.3;}
+    body {min-width: 1024px;padding: 0 20px 75px 20px;font-size: 12px;}
+    html,body,input,button,select,input,textarea,h1,h2,h3,h4,h5,h6,pre {font-family: 'Noto Sans','Nanum Gothic', '나눔고딕', 'Malgun Gothic', '맑은 고딕', Verdana, Tahoma, "돋움", Dotum, "굴림", Gulim, Geneva, sans-serif, Apple Gothic, AppleGothic;}
+    h1,h2,h3,h4,h5,h6 {color:#000;}
+    img {vertical-align:top; border:0 none;}
+    fieldset, abbr, acronym {border:0 none;}
+    dl,dt,dd,ul,ol,li {list-style:none;}
+    em,address {font-style:normal;}
+    legend,hr { display:none;}
+    a {color: #898989;}
+    a:hover {color: #444;}
+    a:visited,
+    a:focus,
+    a:active {color: #444;}
+    caption {display: none;}
+    .contents {min-width:1000px; padding:0 10px;}
+    .contents h1 {margin:35px auto 20px; font-size:30px; font-weight:500; text-align:center;}
+    .contents h2 {margin:20px 0 10px; font-size:15px;font-weight: 500;}
+    .tbl_row {width:100%; border-collapse:collapse; border-spacing:0; margin:5px 0 50px; border-top:1px solid #bbb;}
+    .tbl_row th {padding:10px 2px; border-bottom:1px solid #bbb; border-left:1px solid #bbb; background-color:#f6f7f8; color:#000;}
+    .tbl_row td {padding:5px; border-bottom:1px solid #d7d7d7; border-left:1px solid #d7d7d7;}
+    .tbl_row td.txt_c {text-align:center;}
+    .tbl_row td a.popup {color:#2b81e0;}
+    .tbl_row td a.sub {color: #777;}
+    .tbl_row td span {display: block; padding-bottom: 5px; }
+    .tbl_row th:first-child, .tbl_row td:first-child {border-left:0;}
+    .tbl_row tr.sky td {background-color:#e7f4f9; color:#444;}
+    .tbl_row tr.step td {font-size:13px!important; font-weight:500;background-color: #e7f4f9;}
+    .tbl_row tr:hover td {background-color:#f5f5f5;}
+    .align_top {vertical-align: top; }
+    /* a.on {font-weight: 700;background-color: #f9f98b;} */
+    a.develop {font-weight: 700;background-color: lightcoral;color: #fff !important;}
+    span.tag {position: relative;padding-left: 15px;line-height: 18px;font-size: 11px;}
+    span.tag:before {display: block;position: absolute;top: 3px;left: 0;width: 12px;height: 12px;background-color: #f9f98b;border-radius: 50%;content: "";}
+    span.develop:before {background-color: lightcoral;}
+
+    .ui-codinglist-mobile{
+    position: fixed;
+    top:0;
+    right:0;
+    padding:20px;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    z-index: 999000;
+}
+
+.ui-codinglist-iframe{
+    width:375px;
+    height:calc(100vh - 40px);
+    background:#fff;
+}
+.contents{padding-right: 415px;}
+  </style>
+</head>
+<body>
+  <div class="contents">
+    <h1>라이나 생명 보완3종 전자서명 코딩 리스트</h1>
+    <table class="tbl_row">
+      <colgroup>
+        <col width="4%" span="3" />
+        <col width="10%" span="5" />
+        <col width="5%" span="3" />
+        <col width="8%" />
+        <col />
+      </colgroup>
+      <thead>
+        <tr>
+          <th colspan="3">STEP</th>
+          <th rowspan="2">1 Depth</th>
+          <th rowspan="2">2 Depth</th>
+          <th rowspan="2">3 Depth</th>
+          <th rowspan="2">5 Depth</th>
+          <th rowspan="2">6 Depth</th>
+          <th colspan="2">ID</th>
+          <th rowspan="2">완료일</th>
+          <th rowspan="2">비고</th>
+        </tr>
+        <tr>
+          <th>계약자</th>
+          <th>설계사</th>
+          <th>지정대리청구인</th>
+          <th>유형:화면</th>
+          <th>유형:팝업</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="step">
+          <td colspan="12">부담보특약</td>
+        </tr>
+        <tr>
+          <td class="txt_c">1.</td>
+          <td class="txt_c">1.</td>
+          <td class="txt_c">1.</td>
+          <td>부담보특약 신청</td>
+          <td>신청내용 확인 및 전자서명</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="txt_c"><a href="" target="_blank" class="sub on">E_GMP080S4</a></td>
+          <td></td>
+          <td class="txt_c">11/00</td>
+          <td>GMP080S4(p25), GMP080S8(p26)</td>
+        </tr>
+
+        <tr>
+          <td class="txt_c">1.</td>
+          <td class="txt_c">1.</td>
+          <td class="txt_c">1.</td>
+          <td></td>
+          <td>전자서명 완료</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="txt_c"><a href="" target="_blank" class="sub on">E_GMP080S6</a></td>
+          <td></td>
+          <td class="txt_c">11/00</td>
+          <td></td>
+        </tr>
+
+        <tr>
+          <td class="txt_c">1.</td>
+          <td class="txt_c">1.</td>
+          <td class="txt_c">1.</td>
+          <td>주요사항 확인 및 전자서명</td>
+          <td>대면설명 확인</td>
+          <td>서명</td>
+          <td></td>
+          <td></td>
+          <td class="txt_c"><a href="" target="_blank" class="sub on">GMP060S6</a></td>
+          <td></td>
+          <td class="txt_c">11/00</td>
+          <td></td>
+        </tr>
+
+        <tr class="step">
+          <td colspan="12">고지사항 보완</td>
+        </tr>
+        <tr>
+          <td class="txt_c">1.</td>
+          <td class="txt_c">1.</td>
+          <td class="txt_c">1.</td>
+          <td>고지사항 보완</td>
+          <td>신청내용 확인 및 전자서명</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td class="txt_c"><a href="" target="_blank" class="sub on">E_GMP080S4_2</a></td>
+          <td></td>
+          <td class="txt_c">11/00</td>
+          <td>GMP080S4(p51 ~ p55), GMP080S8(p56)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="ui-codinglist-mobile on">
+    <iframe id="codingListIframe" title="mobile preview" class="ui-codinglist-iframe type-ipx" src=""></iframe>
+  </div>
+</body>
+<script>
+  $('table a').each(function () {
+    this.href = this.text + '.html';
+  });
+
+  $('table a').on('mouseover', function(){
+    console.log($(this).attr('href'));
+    $('#codingListIframe').attr('src', $(this).attr('href'));
+  });
+
+</script>
+
+</html>

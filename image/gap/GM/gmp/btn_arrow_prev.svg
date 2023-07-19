@@ -1,0 +1,16 @@
+<svg id="이전_비활성" data-name="이전 비활성" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #cacaca;
+        opacity: 0.5;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <circle id="타원_32" data-name="타원 32" class="cls-1" cx="15" cy="15" r="15"/>
+  <path id="패스_280" data-name="패스 280" class="cls-2" d="M788.23,1825.478a1.353,1.353,0,0,1-.959-.4l-5.243-5.249a1.354,1.354,0,0,1,0-1.917l5.243-5.25a1.356,1.356,0,0,1,1.917,1.919l-4.285,4.29,4.285,4.29a1.356,1.356,0,0,1-.959,2.314Z" transform="translate(-771.921 -1803.873)"/>
+</svg>

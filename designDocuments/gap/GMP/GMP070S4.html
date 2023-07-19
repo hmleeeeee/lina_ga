@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- ==========================
+화면ID : GMP070S4.html
+프로그램명 : 주요사항 확인 및 전자서명 (설계사)
+============================== -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>라이나생명GA</title>
+    <!-- css load -->
+    <link rel="stylesheet" href="../../../css/gap/GM/gmp/import-renewal.css">
+    <!--/ css load -->
+    <!-- javaScript load -->
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/commonUi-renewal.js"></script>
+    <!--/ javaScript load -->
+</head>
+<body>
+<!-- ========== 컨텐츠 html ViewStack ========== -->
+<div id="divMainViewStack">
+    <div class="wrap">
+        <div class="headStep splash">
+            <ul class="stepArea">
+                <li><span>01</span>보험계약정보<br>확인</li><!--20210709 워딩 수정-->
+                <li><span>02</span>청약서류<br>확인</li>
+                <li class="on"><span>03</span>주요사항 확인<br>및 전자서명</li>
+            </ul>
+        </div>
+        <div class="progressWrap"> <progress max="1000" value="1000"></progress></div>
+        <div class="header">
+            <div class="headInner">
+                <button onclick="history.back();" type="button" class="btnPrev"><span class="hidden">이전</span></button>
+                <h1 class="logo"><a href="#" class="hidden">라이나생명 모바일청약</a></h1>
+                <div>
+                    <!-- 20210716 전화앱 삭제 -->
+                    <button type="button" class="btnNext"><span class="hidden">다음</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="contents">
+            <div class="contTop">
+                <p class="contStep"><span><b>3</b>/3</span>주요사항 확인 및 전자서명</p>
+                <h2><em>주요사항을 확인 </em>후<br /><em>전자서명</em>을 진행해 주세요.</h2>
+            </div>
+            <div class="cont continfo">
+                <p>확인(동의)서를 꼼꼼하게 읽으시고, 덧쓰기 체크 및<br>전자서명을 진행해 주시기 바랍니다.</p>
+                <p>자필서명을 저장해 주시면 다음 서명 시 불러오기<br>적용이 가능합니다.</p>
+            </div>
+    
+            <div class="bottomBtn">
+                <button type="button" class="btnSt1">시작하기</button>
+            </div>
+        </div>
+    
+    </div>
+</div>
+<!-- ==========/ 컨텐츠 html ViewStack ========== -->
+</body>
+</html>

@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+/* layerPopup */
+[class*='layer'] [class*='bg_'] {padding-top: 82px;margin-top: 50px;}
+[class*='layer'] .header {margin-top: 0;}
+[class*='layer'] .cont {padding: 0;margin: 0;}
+[class*='layer'] .callingCard {margin-top: 35px;text-align: left;}
+[class*='layer'] .txtMain {margin-bottom: 0;color: #606060;font-size: 18px;font-weight: 700;text-align: center;line-height: 28px;}
+[class*='layer'] .txtMain + p {margin: 20px 0 30px;color: #606060;font-size: 15px;line-height: 21px;text-align: center;}
+.layer .layerContainer {border-radius: 16px;}
+.layer .layerBody {padding: 38px 20px 31px;line-height: 21px;}
+.layer [class*='bg_'] {margin-top: 0;}
+.layer .layerInner {padding: 65px 0 55px;}
+.layer .layerFooter .btnSt1 {height: 53px;}
+.layer .layerTxtlist {padding-top: 30px;margin-top: 30px;text-align: left;border-top: 1px solid #cacaca;}
+.layer .layerTxtlist p > em {display: block;color: #333;font-size: 16px;line-height: 28px;}
+.layer .layerTxtlist p {color: #606060;font-size: 13px;}
+.layer .layerTxtlist p + p {margin-top: 25px;}
+.layer .callingCard {padding-bottom: 0;}
+.layer .btnHalf {margin-top: 10px;}
+.layer .btnHalf a {padding: 0;}
+.layer .btnHalf a:nth-child(1) {width: 46%;}
+.layer .btnHalf a:nth-child(2) {width: 54%;margin-left: 0;}
+.layerFooter .btn {padding: 20px 20px 35px;}
+/*fullType*/
+.layerFull [class*='bg_pop'] {padding-bottom: 0 !important;}
+.layerFull .layerHeader {height: 64px;padding: 20px;}
+.layerFull .layerHeader .btnLayerClose {top: 21px;right: 20px;width: 18px;height: 18px;background: url(../../../../image/gap/GM/renewal/btn_close.png) center no-repeat;background-size: contain;}
+.layerFull .btnLayerClose::before, .layerFull .btnLayerClose::after {display: none;}
+.layerFull .layerHeader .logo {position: absolute;left: 50%;bottom: 0;width: 176px;height: 25px;margin: 0 auto;background: url(../../../../image/gap/GM/renewal/logo.png) center no-repeat;background-size: contain;transform: translateX(-50%);}
+.layerFull .layerBody {padding: 35px 20px 50px;border: none;}
+.layerFull .layerBody .txtMain {margin-bottom: 24px;font-size: 24px;}
+.layerFull .layerBody .txtMain > span {font-size: 24px;}
+.layerFull .layerBody .tabWrap {padding: 0;}
+
+/*layerPop bg*/
+[class*='layer'] .bg_move {background: url(../../../../image/gap/GM/renewal/bg_move.png) center top no-repeat;background-size: 58px;}
+[class*='layer'] .bg_kakao {padding-top: 96px !important;background: url(../../../../image/gap/GM/renewal/bg_kakao.png) center top no-repeat;background-size: 62px;} /*카카오페이 인증 완료*/
+[class*='layer'] .bg_timeout {background: url(../../../../image/gap/GM/renewal/bg_timeout.png) center top no-repeat;background-size: 56px;}/*진행 가능시간 종료*/
+[class*='layer'] .bg_impossible {background: url(../../../../image/gap/GM/renewal/bg_impossible.png) center top no-repeat;background-size: 58px;}/*전자청약 진행 불가*/
+[class*='layer'] .bg_systemError {padding-top: 72px;margin-bottom: 13px;background: url(../../../../image/gap/GM/renewal/bg_systemError.png) center top no-repeat; background-size: 62px;}/*시스템 오류 안내*/
+[class*='layer'] .bg_calling {background: url(../../../../image/gap/GM/renewal/bg_calling.png) center top no-repeat;background-size: 65px;}/*설계사 문의*/
+[class*='layer'] .bg_impossible {background: url(../../../../image/gap/GM/renewal/bg_impossible.png) center top no-repeat;background-size: 58px;}/*시스템 오류 안내*/
+[class*='layer'] .bg_chkcomplete {background: url(../../../../image/gap/GM/renewal/bg_chkcomplete.png) center top no-repeat;background-size: 61px;}/*전자청약 완료*/
+[class*='layer'] .bg_complete02 {background: url(../../../../image/gap/GM/renewal/bg_complete02.png) center top no-repeat;background-size: 48px;}/*전자서명 제출 완료*/
+[class*='layer'] .bg_fail {background: url(../../../../image/gap/GM/renewal/bg_fail.png) center top no-repeat;background-size: 66px;} /*출금실패 청약 취소 안내*/
+
+/*modal*/
+.layerBottom { display:none; overflow:hidden; z-index: 1;}
+.layerBottom .layerContainer { position: fixed; left:0; bottom: 0; width:100%; border-radius: 18px 18px 0 0; background:#FFF; z-index:1002; transition:all .3s ease-out;}
+/* .layerBottom .layerContainer.on { bottom:0;} */
+.layerBottom .layerHeader {position:relative;height: auto;padding:0 20px 20px;}
+.layerBottom .layerHeader:after {display:block;clear:both;content:''}
+.layerBottom .layerHeader .popTitle{margin-top:10px;font-size:18px;color:#333;font-weight:500;}
+.layerBottom .layerHeader .popTitle.line {padding-bottom: 22px;margin-bottom: 10px;border-bottom: 1px solid #cacaca;}
+.layerBottom .layerHeader .btnPopclose {width: 100%;padding: 10px 0 20PX;background: #fff;}
+.layerBottom .layerHeader .btnPopclose:after {display:block;height:5px;width:80px;margin: 0 auto;background:#333 center no-repeat;border-radius:2.5px;content: '';}
+.layerBottom .layerBody {padding: 0 20px;box-sizing: border-box;}
+.layerBottom .layerBody .infoTit {color: #333;}
+.layerBottom .tabContent {max-height:50vh;padding: 0;overflow-y:auto;}
+.layerBottom .tabSt1 {padding: 10px 0 0;border-bottom: none;}
+.layerBottom .tabSt1 li {width:auto;min-width:45px;height:35px;font-size:16px;font-weight:500;}
+.layerBottom .tabSt1 li.active:after {height:3px;border-bottom:3px solid #007be0;}
+.layerBottom .tabSt1 li + li {margin-left: 7px;}
+.layerBottom .listBank li {width:25%;height:100px;text-align:center;margin-bottom:10px;color: #777;font-size: 16px;line-height: 18px;}
+.layerBottom .listBank li.etc {color: #999;}
+.layerBottom .listBank li .img {display:block;width:100%;height:50px;text-align:center;}
+.layerBottom .listBank li .img img{width: 50px;height: 50px;}
+.layerBottom ul.listSt1 {margin-bottom: 25px;text-align: left;}
+.layerBottom ul.listSt1 > li {padding-left: 0;margin-bottom: 10px;}
+.layerBottom ul.listSt1 > li .account {position: relative;}
+.layerBottom ul.listSt1 > li .account span {width: auto;margin-right: 5px;background: none !important;}
+.layerBottom ul.listSt1 > li .account span:before {display: inline-block;margin-right: 5px;content: '/';}
+.layerBottom ul.listSt1 > li .account span:first-child:before {display: none;} 
+.layerBottom ul.listSt1 > li:before {display: none;}
+.layerBottom .formCheckbox .formLabel input[type='radio'] + p {padding-left: 47px;background: url(../../../../image/gap/GM/renewal/ico_chkbox.png) 20px 50% no-repeat !important;background-size: 20px !important;}
+.layerBottom .formCheckbox .formLabel input[type='radio']:checked + p {background: url(../../../../image/gap/GM/renewal/ico_chkbox_on.png) 20px 50% no-repeat !important;background-size: 20px !important;}
+.layerBottom .formCheckbox .formLabel input[type='radio']:checked + p span {color: #007be0;}
+.layerBottom .btnArea {margin-bottom: 20px;}
+.layerBottom .btnArea .btnSt1 {height: 49px;font-size: 15px;font-weight: 400;line-height: 49px;}
+.layerBottom .btnHalf .btnSt1 {padding: 0;}
+
+/*병명 팝업*/
+.layerFull.layerType2 .layerBody {padding: 0;}
+.layerFull .contDisease .cont {padding: 20px 0 25px 0;}
+.layerFull .contDisease .cont:last-child {padding-bottom: 0;}
+.layerFull.layerType2 .layerHeader {height: auto;border-bottom: 7px solid #f2f2f2;}
+.layerFull.layerType2 .layerHeader h2 {padding: 38px 0 10px;color: #333;font-size: 28px;font-weight: 300;line-height: 35px;}
+.layerFull.layerType2 .layerHeader h2 > em {color: #007be0;}
+.layerFull.layerType2 .layerHeader .btnLayerClose {top: 48px;}
+.layerFull.layerType2 .layerBody .contents {padding: 30px 20px 35px;overflow-y: auto;}
+.layerFull.layerType2 .layerBody .cont {color: #777;line-height: 21px;}
+.layerFull.layerType2 .layerBody .infoTit {color: #333;}
+.layerFull.layerType2 .layerBody .contDisease .cont:first-child {padding-top: 0;}
+.layerFull.layerType2 .layerBody .contDisease .cont .txtQ {font-size: 18px;font-weight: 500;}
+.layerFull.layerType2 .layerBody .contDisease .cont .txtQ + .formGroup {margin-top: 14px;}
+.layerFull.layerType2 .layerBody .contDisease .cont .txtVali {left: 0;}
+.layerFull.layerType2 .layerBody .contDisease .cont .contGray {margin: 25px -20px 0 0; padding: 30px 20px 30px 0; background: #fff;}
+.layerFull.layerType2 .layerBody .contDisease .cont .titGroup .txtQ.fl strong {font-weight: 500;}
+.layerFull.layerType2 .layerBody .contDisease .cont .formChoice .formLabel input[type='radio'] + p span {width: 20px; height: 20px; margin-right: 9px; display: inline-block; vertical-align: text-top; color: #777; background: url(../../../../image/gap/GM/renewal/ico_radio.png) 0 50% no-repeat !important; background-size: 20px !important;}
+.layerFull.layerType2 .layerBody .contDisease .cont .formChoice .formLabel input[type='radio']:checked + p span {color: #333; font-weight: 500; background: url(../../../../image/gap/GM/renewal/ico_radio_on.png) 0 50% no-repeat !important; background-size: 20px !important;}
+.layerFull.layerType2 .contGray .formGroup {margin-top: 0;}
+.layerFull.layerType2 .contGray .formGroup input.formControl {background: #f9f9f9;border-color: #f9f9f9;}
+.layerFull.layerType2 .titGroup .btnSt2 {height: 37px;line-height: 36px;padding: 0 23px;color: #777;font-size: 15px;font-weight: 500;}
+.layerFull.layerType2 .titGroup .txtQ.fl {margin-bottom: 0;line-height: 36px;}
+.layerFull.layerType2 .infoTit > strong {font-weight: 500;}
+.layerFull.layerType2 .layerFooter .division {padding: 10px 20px;background: #fff;}
+.layerFull.layerType2 .layerFooter .impor.colorOg {font-size: 15px;font-weight: 400;line-height: 26px;}
+.layerFull.layerType2 .layerFooter .impor.colorOg::after {top: 5px;}
+.layerFull.layerType2 .layerFooter .btnHalf .btnSt1 {height: 49px;line-height: 49px;font-size: 15px;}
+.layerSelect.layerBottom .layerBody {padding: 0 20px;}
+.layerSelect.layerBottom .layerHeader {margin: 0;}
+.layerSelect.layerBottom .formGroup {margin-top: 0;}
+.layerSelect.layerBottom .formControl.do, 
+.layerSelect.layerBottom .formControl.vail {background: #f9f9f9;}
+.layerSelect.layerBottom .formControl.do {color: #007BE0;}
+.layerSelect.layerBottom .layerBody .infoTit {margin-bottom: 10px;font-size: 16px;}
+.layerSelect.layerBottom .cont .popTitle {padding: 0;margin-bottom: 14px;color: #333;font-size: 18px;font-weight: 500;}
+.layerSelect.layerBottom .cont .line {padding: 20px 0;margin-bottom: 20px;color: #333;font-size: 16px;}
+.layerSelect.layerBottom .cont .line .name {color: #777; padding-right: 8px;}
+.layerSelect.layerBottom .contScroll {margin: 0 -20px;}
+.layerSelect.layerBottom .contScroll .infoTit {padding-bottom: 20px;margin: 0 20px;}
+.layerSelect.layerBottom .listSelect {padding: 20px 0;}
+.layerSelect.layerBottom .listSelect li {padding: 0 20px;color: #777;font-size: 15px;line-height: 45px;}
+.layerSelect.layerBottom .listSelect li.select {padding: 0 20px;color: #fff;font-weight: 400;}
+.layerSelect.layerBottom .listSelect2 {padding: 0 20px 20px;}
+.layerSelect.layerBottom .listSelect2 li {margin-top: 0;}
+.layerSelect.layerBottom .listSelect2 .checkGroup.type02 .formLabel input[type='radio'] + p {font-size: 16px;line-height: 19px;}
+.layerSelect.layerBottom .listSelect2 .checkGroup .formLabel {width: 100%;margin: 10px 0;}
+.layerSelect.layerBottom .cont .radio_list > p {color: #333;font-weight: 500;}
+.layerSelect.layerBottom .cont .txtDisease {padding: 20px 0;margin: 20px 0;line-height: 24px;}
+.layerSelect.layerBottom .bottomBtn {padding: 0 0 48px;}
+/*알릴의무사항 팝업*/
+.layerDuty .infoTit {margin: 30px 0 10px;font-size: 16px;}
+/* 비교안내 팝업 */
+.tableScroll {position:relative;padding-bottom: 108px;/*overflow:hidden;*/border: none;border-top: 1px solid #333;}
+.tableArea {width:100%;overflow:auto;}
+.tableScroll table {width:100%;}
+.tableScroll th, .tableScroll td {width: 120px;padding:15px 10px;border-right:1px solid #cacaca;border-bottom:1px solid #cacaca;background:#fff;white-space:nowrap;vertical-align:middle;text-align: center;}
+.tableScroll th {color: #333;font-weight: 500;background: #f9f9f9;}
+.tableScroll th.fixedSide {width: 110px;padding-left: 10px;text-align: left;}
+.clone {position:absolute;top:0;left:0;pointer-events:none;}
+.clone th, .clone td {visibility:hidden}
+.clone td, .clone th {border-color:transparent}
+.clone tbody th {	visibility:visible;color:#333;font-weight: 400;}
+.clone .fixedSide {border-bottom:1px solid #cacaca;visibility:visible;}
+.clone thead, .clone tfoot{background:transparent;}
+.tableScroll .btnPrev {background-image: url(../../../../image/gap/GM/renewal/arr_left.png);}
+.tableScroll .btnNext {background-image: url(../../../../image/gap/GM/renewal/arr_right.png);}

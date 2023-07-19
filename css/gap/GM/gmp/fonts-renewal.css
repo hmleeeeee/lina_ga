@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/* 20210622 font 수정 - 잘못된 format타입 변경 및 roboto 추가 */
+@font-face {
+    font-family: 'NotoSans';
+    font-weight: 300;
+    src: local('NotoSansLight'),
+    url('../fonts/NotoSans-Light.woff') format('woff'),
+    url('../fonts/NotoSansRegular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NotoSans';
+    font-weight: 400;
+    src: local('NotoSansRegular'),
+    url('../fonts/NotoSansRegular.woff2') format('woff2'),
+    url('../fonts/NotoSansRegular.woff') format('woff'),
+    url('../fonts/NotoSansRegular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NotoSans';
+    font-weight: 500;
+    src: local('NotoSansMedium'),
+    url('../fonts/NotoSansMedium.woff2') format('woff2'),
+    url('../fonts/NotoSansMedium.woff') format('woff'),
+    url('../fonts/NotoSansMedium.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NotoSans';
+    font-weight: 700;
+    src: local('NotoSansBold'),
+    url('../fonts/NotoSansBold.woff2') format('woff2'),
+    url('../fonts/NotoSansBold.woff') format('woff'),
+    url('../fonts/NotoSansBold.ttf') format('truetype');
+}
+/* Roboto */
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    src: local('RobotoRegular'),
+    url('../fonts/Roboto-Regular.woff2') format('woff2'),
+    url('../fonts/Roboto-Regular.woff') format('woff'),
+    url('../fonts/Roboto-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    src: local('RobotoBold'),
+    url('../fonts/Roboto-Bold.woff2') format('woff2'),
+    url('../fonts/Roboto-Bold.woff') format('woff'),
+    url('../fonts/Roboto-Bold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 900;
+    src: local('RobotoBlack'),
+    url('../fonts/Roboto-Black.woff2') format('woff2'),
+    url('../fonts/Roboto-Black.woff') format('woff'),
+    url('../fonts/Roboto-Black.ttf') format('truetype');
+}
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- ==========================
+화면ID : GMP020P1.html
+프로그램명 : 전자청약진행 불가 팝업
+============================== -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>라이나생명GA</title>
+    <!-- css load -->
+    <link rel="stylesheet" href="../../../css/gap/GM/gmp/import-renewal.css">
+    <!--/ css load -->
+    <!-- javaScript load -->
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/commonUi-renewal.js"></script>
+    <!--/ javaScript load -->
+</head>
+<body>
+<!-- ========== 컨텐츠 html ViewStack ========== -->
+<div id="divMainViewStack">
+    <button onclick="commonUi.layer.showPop('GMP020P1');">전자청약진행 불가</button>
+</div>
+<!-- ==========/ 컨텐츠 html ViewStack ========== -->
+
+
+<!-- ========== Popup html Load 영역  ========== -->
+<div id="GMP020P1" class="layerFull" style="display:block;">
+    <div class="layerHeader borderNone">
+        <h1 class="logo"><a href="#" class="hidden">라이나생명 모바일청약</a></h1>
+    </div>
+    <div class="layerBody">
+        <div class="cont">
+            <h2 class="txtMain bg_impossible"><span class="colorBl">전자청약</span> 진행이<br> 불가능합니다.</h2> <!--20210709 워딩 수정-->
+            <p class="txtSub fs14">자세한 사항은 설계사에게 문의하시기 바랍니다.<br>
+                라이나 생명은 고객님의 개인정보를<br>엄격하게 관리 보호하고 있습니다.</p><!--20210721 문구 간격 수정--><!--20210709 'fs14' class 추가-->
+        </div>
+        <div class="callingCard">
+            <p>
+                <span class="name">라인하설계사</span>
+                <span class="colorBl">010-1234-5678</span>
+                <span>에이플러스에셋어드바이저<br>분당지점</span>
+            </p>
+            <div>
+                <button type="button" class="btnCall"><span class="hidden">전화하기</span></button>
+                <span class="colorBl">전화하기</span>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ==========/ Popup html Load 영역 ========== -->
+</body>
+</html>

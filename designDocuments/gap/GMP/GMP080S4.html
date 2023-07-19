@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<!-- ==========================
+화면ID : GMP080S4.html
+프로그램명 : 주요사항 확인 및 전자서명 (설계사)
+============================== -->
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <title>라이나생명GA</title>
+    <!-- css load -->
+    <link rel="stylesheet" href="../../../css/gap/GM/gmp/import-renewal.css">
+    <!--/ css load -->
+    <!-- javaScript load -->
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-3.5.1.min.js"></script>
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/jquery-ui-1.12.1.min.js"></script>
+    <script type="text/javascript" src="../../../script/gap/GM/gmp/commonUi-renewal.js"></script>
+    <!--/ javaScript load -->
+</head>
+<body>
+<div id="divMainViewStack">
+	<!-- GMP080S4.html -->
+    <div class="wrap">
+        <div class="headStep splash">
+            <ul class="stepArea">
+                <li><span>01</span>보험계약정보<br>확인</li><!--20210709 워딩 수정-->
+                <li><span>02</span>청약서류<br>확인</li>
+                <li class="on"><span>03</span>주요사항 확인<br>및 전자서명</li>
+            </ul>
+        </div>
+        <div class="progressWrap"> <progress max="1000" value="1000"></progress></div>
+        <div class="header">
+            <div class="headInner">
+                <button onclick="history.back();" type="button" class="btnPrev"><span class="hidden">이전</span></button>
+                <h1 class="logo"><a href="#" class="hidden">라이나생명 모바일청약</a></h1>
+                <div>
+                    <button type="button" class="btnCall"><span class="hidden">문의</span></button>
+                </div>
+            </div>
+        </div>
+        <div class="contents">        
+            <div class="contTop">
+                <p class="contStep"><span><b>3</b>/3</span>주요사항 확인 및 전자서명</p>
+                <h2><em>계약 체결·이행</em>을 위한<br> <em>개인(신용)정보 처리</em>를<br> 동의해주세요.</h2>
+            </div>
+            <div class="contArea">
+                <div class="cont accordionWrap on">
+                    <h3 class="infoTit right">계약체결·이행을 위한 상세 동의[필수]<button class="btnContentMore"><span class="hidden">더보기</span></button></h3> <!--20210709 태그 변경 및 'infoTit, right' class 추가-->
+                    <ul class="contList contentHidden">                    
+                        <li>
+                            <div class="accordionWrap on">
+                                <div class="formGroup inBtn">
+                                    <label class="formLabel">
+                                        <input type="checkbox" class="chkAll">
+                                        <p>전체동의</p>
+                                    </label>
+                                    <button type="button" class="btnSt2">전문이미지 보기</button>
+                                </div>
+                                <div class="contentHidden">
+                                    <div class="contBox">
+                                        <p>귀하는 개인(신용)정보 수집·이용 및 조회, 제공에 관한 동의를 거부하실 수 있으며, 개인의 신용도 등을 평가하기 위한 목적 이외의 개인(신용)정보 제공 동의를 철회할 수 있습니다. 다만, 본 동의는 '보험계약
+                                        인수심사·체결·이행·유지·관리'를 위해 필수적인 사항이므로 동의를 거부하시는 경우 관련 업무 수행이 불가능합니다
+                                        </p>
+                                    </div>
+                                    <p class="star">개인(신용)정보의 수집·이용, 제공 및 조회에 대한 상세 내용은<br>
+                                    전문 이미지 보기를 통해 확인하실 수 있습니다</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordionWrap on">
+                                <div class="formGroup">
+                                    <label class="formLabel">
+                                        <input type="checkbox">
+                                        <p>수집·이용에 관한 사항</p>
+                                    </label>
+                                    <button class="btnContentMore"><span class="hidden">더보기</span></button>
+                                </div>
+                                <div class="contentHidden">
+                                    <div class="borderBox">
+                                        <div class="formGroup radio_each_type">
+                                            <label>고유식별 정보의 수집·이용에 동의 하십니까?</label>
+                                            <div class="formChoice">
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radio1" checked>
+                                                    <p>동의함</p>
+                                                </label>
+                                            <!-- <label class="formLabel">
+                                                    <input type="radio" name="radio1">
+                                                    <p><span></span>동의하지않음</p>
+                                                </label> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="borderBox">
+                                        <div class="formGroup radio_each_type">
+                                            <label>민감정보의 수집·이용에 동의 하십니까?</label>
+                                            <div class="formChoice">
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radio2" checked>
+                                                    <p>동의함</p>
+                                                </label>
+                                            <!-- <label class="formLabel">
+                                                    <input type="radio" name="radio2">
+                                                    <p><span></span>동의하지않음</p>
+                                                </label> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="borderBox">
+                                        <div class="formGroup radio_each_type">
+                                            <label>개인(신용)정보의 수집·이용에 동의 하십니까?</label>
+                                            <div class="formChoice">
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radio3" checked>
+                                                    <p>동의함</p>
+                                                </label>
+                                            <!-- <label class="formLabel">
+                                                    <input type="radio" name="radio3">
+                                                    <p><span></span>동의하지않음</p>
+                                                </label> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>   
+                        <li>
+                            <div class="accordionWrap">
+                                <div class="formGroup">
+                                    <label class="formLabel">
+                                        <input type="checkbox" class="chkAll">
+                                        <p>제공에 관한 사항</p>
+                                    </label>
+                                    <button class="btnContentMore"><span class="hidden">더보기</span></button>
+                                </div>
+                                <div class="contentHidden">
+                                    <div class="borderBox">
+                                        <div class="formGroup radio_each_type">
+                                            <label>고유식별 정보의 수집·이용에 동의 하십니까?</label>
+                                            <div class="formChoice">
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radio4" checked>
+                                                    <p>동의함</p>
+                                                </label>
+                                                <!-- <label class="formLabel">
+                                                    <input type="radio" name="radio4">
+                                                    <p><span></span>동의하지않음</p>
+                                                </label> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="borderBox">
+                                        <div class="formGroup radio_each_type">
+                                            <label>민감정보의 수집·이용에 동의 하십니까?</label>
+                                            <div class="formChoice">
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radio5" checked>
+                                                    <p>동의함</p>
+                                                </label>
+                                                <!-- <label class="formLabel">
+                                                    <input type="radio" name="radio5">
+                                                    <p><span></span>동의하지않음</p>
+                                                </label> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="borderBox">
+                                        <div class="formGroup radio_each_type">
+                                            <label>개인(신용)정보의 수집·이용에 동의 하십니까?</label>
+                                            <div class="formChoice">
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radio6" checked>
+                                                    <p>동의함</p>
+                                                </label>
+                                                <!-- <label class="formLabel">
+                                                    <input type="radio" name="radio6">
+                                                    <p><span></span>동의하지않음</p>
+                                                </label> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="accordionWrap">
+                                <div class="formGroup">
+                                    <label class="formLabel">
+                                        <input type="checkbox" class="chkAll">
+                                        <p>조회에 관한 사항</p>
+                                    </label>
+                                    <button class="btnContentMore"><span class="hidden">더보기</span></button>
+                                </div>
+                                <div class="contentHidden">
+                                    <div class="borderBox">
+                                        <div class="formGroup radio_each_type">
+                                            <label>고유식별 정보의 수집·이용에 동의 하십니까?</label>
+                                            <div class="formChoice">
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radio4" checked>
+                                                    <p>동의함</p>
+                                                </label>
+                                                <!-- <label class="formLabel">
+                                                        <input type="radio" name="radio4">
+                                                        <p><span></span>동의하지않음</p>
+                                                    </label> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="borderBox">
+                                        <div class="formGroup radio_each_type">
+                                            <label>민감정보의 수집·이용에 동의 하십니까?</label>
+                                            <div class="formChoice">
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radio5" checked>
+                                                    <p>동의함</p>
+                                                </label>
+                                                <!-- <label class="formLabel">
+                                                        <input type="radio" name="radio5">
+                                                        <p><span></span>동의하지않음</p>
+                                                    </label> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="borderBox">
+                                        <div class="formGroup radio_each_type">
+                                            <label>개인(신용)정보의 수집·이용에 동의 하십니까?</label>
+                                            <div class="formChoice">
+                                                <label class="formLabel">
+                                                    <input type="radio" name="radio6" checked>
+                                                    <p>동의함</p>
+                                                </label>
+                                                <!-- <label class="formLabel">
+                                                        <input type="radio" name="radio6">
+                                                        <p><span></span>동의하지않음</p>
+                                                    </label> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- 최초 hidden, 모두 동의 체크 시 서명 영역 등장 -->
+                    <div class="signBox">
+                        <p>위의 내용을 확인하시고 고객님의 성함을 모두 정자로 입력해주세요.</p><!--20210722 문구 수정-->
+                        <div>
+                            <button type="button" class="btn_drop">지우기</button>
+                        </div>
+                    </div>
+                    <div class="btnArea">
+                        <button type="button" class="btnSt1">서명적용</button>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
+</div>
+<!--/ GMP080S4.html -->
+<script>
+    var link = $('#navbar a.dot'),
+        isVisible = false;
+
+    link.on('click', function (e) {
+        var target = $($(this).attr('href'));
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 600);
+        $(this).addClass('active');
+        e.preventDefault();
+    });
+
+    $(window).on('scroll', function () {
+        scrNav();
+    });
+    // scrNav function 
+    function scrNav() {
+        var sTop = $(window).scrollTop();
+        $('section').each(function () {
+            var id = $(this).attr('id'),
+                offset = $(this).offset().top - 1,
+                height = $(this).height();
+            if (sTop >= offset && sTop < offset + height) {
+                link.removeClass('active');
+                $('#navbar').find('[data-scroll="' + id + '"]').addClass('active');
+            }
+        });
+    }
+</script>
+</body>
+</html>
