@@ -1,1 +1,1 @@
-# lina_ga
+# https://hmleeeeee.github.io/lina_ga/designDocuments/gap/GMP/index.html
